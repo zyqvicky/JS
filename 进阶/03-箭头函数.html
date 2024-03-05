@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const fn = function fn() {
+        //     console.log(123)
+        // }
+
+        // 箭头函数 替代了匿名函数
+        // const fn = () => {
+        //     console.log(123)
+        // }
+        // fn()
+
+        // const fn = (x) => {
+        //     console.log(x)
+        // }
+        // fn(1)
+
+        // 只有一个形参的时候可以省略小括号
+        // const fn = x => {
+        //     console.log(x)
+        // }
+        // fn(1)
+
+        // 只有一行代码的时候可以省略大括号
+        // const fn = x => console.log(x) 
+        // fn(1)
+
+        // const fn = x => {
+        //     return x + x
+        // }
+        // console.log(fn(1))
+
+        // 只有一行代码的时候可以省略return
+        // const fn = x => x + x
+        // console.log(fn(1))
+
+        // const fn1 = (x, y) => x + y
+        // console.log(fn1(2, 3));
+
+        // 箭头函数可以直接返回一个对象
+        // 大括号里包的是一个对象 外面大括号会混淆 所以加括号
+        // const fn = (uname) => ({uname: uname})
+        // console.log(fn('左笑笑'))
+
+
+        // 箭头函数里面没有arguments动态参数 但是有剩余参数
+        // const getsum = (...arr) => {
+        //     let sum = 0
+        //     for (let i = 0; i < arr.length; i++) {
+        //         sum += arr[i]
+        //     }
+        //     return sum
+        // }
+        // console.log(getsum(2, 3, 4))
+
+        // 谁调用函数 this就指向谁
+        // console.log(this) // window
+        // function fn() {
+        //     console.log(this);
+        // }
+        // fn()  //window.fn()  ===  window
+
+        // const obj = {
+        //     name: 'andy',
+        //     sayHi: function() {
+        //         console.log(this)
+        //     }
+        // }
+        // obj.sayHi()
+
+        // 箭头函数不会创建自己的this 从自己作用域链的上一层调用this
+        // const fn = () => {
+        //     // 这个函数里没有找到调用它的 上一层是script
+        //     console.log(this) // window
+        // }
+        // fn()
+        // console.log()
+
+        // 对象方法箭头函数 this
+        // const obj = {
+        //     uname: '笑笑',
+        //     sayHi: () => {
+        //         console.log(this)  // window
+        //         // obj的上一级
+        //     }
+        // }
+        // obj.sayHi()
+
+        // 箭头函数没有this 所以才会去上一级找
+        const obj = {
+            uname: '笑笑',
+            sayHi: function() {
+                let i = 10
+                const count = () => {
+                    console.log(this) // obj
+                }
+                count() 
+            }
+        }
+        obj.sayHi()
+    </script>
+</body>
+
+</html>

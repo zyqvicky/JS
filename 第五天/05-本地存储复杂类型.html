@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            uname: '笑笑',
+            age: 18,
+            gender: '女'
+        }
+        // 存了就用不了了、、、 复杂数据类型无法直接使用
+        // localStorage.setItem('obj', obj)
+        // console.log(localStorage.getItem('obj'));
+
+        // 先将复杂类型转化为字符串再存进去
+        //JSON.stringify()方法
+        localStorage.setItem('obj',JSON.stringify(obj))
+
+        // 取出来的也只能是字符串
+        // {uname: "笑笑", age: 18, gender: "女"} JSON 就长这样
+        // 再转成对象
+        console.log(JSON.parse(localStorage.getItem('obj')))
+
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 三个点
+        // function Sum(...arr) {
+        //     let sum = 0
+        //     for (let i = 0;i < arr.length;i++) {
+        //         sum += arr[i]
+        //     }
+        //     return sum
+        // }
+        // console.log(Sum(1,2,3,4,5,6,7,8))
+
+        // 第一个和第二个参数赋给a和b 剩余的都给arr
+        // arr是一个真数组
+        // function Sum(a, b, ...arr) {
+        //     let sum = 0
+        //     for (let i = 0; i < arr.length; i++) {
+        //         sum += arr[i]
+        //     }
+        //     return sum
+        // }
+
+        // 建议多用剩余参数
+
+        // 展开运算符
+        const arr1 = [1, 2, 3]
+        console.log(...arr1)  // 1 2 3
+        console.log(Math.max(...arr1))  // 3
+
+
+        // 合并数组
+        const arr2 = [3, 4, 5]
+        const arr = [...arr1, ...arr2]
+        console.log(arr)
+        
+    </script>
+</body>
+
+</html>

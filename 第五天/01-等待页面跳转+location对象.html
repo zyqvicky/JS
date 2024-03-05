@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://www.baidu.com">将在<span>5</span>秒之后自动跳转</a>
+    <script>
+        const a = document.querySelector('a')
+        let num = 5
+        let timerId = setInterval(function() {
+            num--
+            a.innerHTML = `将在<span>${num}</span>秒之后自动跳转`
+            if (num === 0) {
+                clearInterval(timerId)
+                //location对象
+                location.href = "http://www.baidu.com"
+            }
+        }, 1000)
+
+        // location.hash()  //做单页面
+        // location.reload() 刷新页面
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getMyDate() {
+            const date = new Date()
+            // console.log(date.getFullYear())
+            // //getMonth的取值是0-11
+            // console.log(date.getMonth() + 1)
+            // console.log(date.getDate())
+            // //getDay是星期几 星期日是0 一是1.。。六是6
+            // console.log(date.getDay())
+            let h = date.getHours()
+            h = h < 10 ? '0' + h : h
+            let m = date.getMinutes()
+            m = m < 10 ? '0' + m : m
+            let s = date.getSeconds()
+            s = s < 10 ? '0' + s : s
+            return `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}号 ${h}:${m}:${s}`
+        }
+        document.documentElement.innerHTML = getMyDate()
+        setInterval(function() {
+            document.documentElement.innerHTML = getMyDate()
+        },1000)
+
+    </script>
+</body>
+
+</html>

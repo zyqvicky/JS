@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //区分了大小写
+        console.log(/^java$/.test('java'))  // true 
+        console.log(/^java$/.test('JAVA'))  // false
+        
+        //不区分大小写 使用i修饰符
+        console.log(/^java$/i.test('JAVA')) // true
+
+        //replace修饰符
+        const str = 'java是一门语言。学JAVA工资很高'
+        const re = str.replace(/java/i,'前端')
+        console.log(re); //前端是一门语言。学JAVA工资很高
+        //实现全局替换 g修饰符
+        const res = str.replace(/java/ig,'前端')
+        console.log(res);
+    </script>
+</body>
+</html>

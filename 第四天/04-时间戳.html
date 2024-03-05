@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //获取时间戳的三种方法
+        //getTime 需要实例化
+        const date = new Date()
+        console.log(date.getTime());
+
+        //+new Date() √
+        console.log(+new Date());
+
+        //Date.now() 要加括号 只能得到当前的
+        console.log(Date.now());
+    </script>
+</body>
+</html>

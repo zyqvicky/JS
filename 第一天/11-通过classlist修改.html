@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            color: #333;
+        }
+
+        .active {
+            color: red;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">文字</div>
+    <script>
+        // 通过classlist添加
+        const box = document.querySelector('.box')
+
+        //追加新类名 不用担心被覆盖、、
+        //此处类名不加点 是字符串
+        // box.classList.add('active')
+
+        // 移除类名
+        // box.classList.remove('box')
+
+        //切换类名 toggle（） 有还是没有？ 有就删掉，没有就加上
+        box.classList.toggle('active')
+    </script>
+</body>
+</html>

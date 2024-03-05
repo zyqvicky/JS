@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>年会抽奖开始辣！</title>
+    <style>
+        .wrapper {
+            width: 840px;
+            height: 420px;
+            background: url(bg01.jpg) no-repeat center / cover;
+            padding: 100px 250px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <strong>笑饱文化年会抽奖</strong>
+        <h1>一等奖：<span id="one">???</span></h1>
+        <h3>二等奖：<span id="two">???</span></h3>
+        <h5>三等奖：<span id="three">???</span></h5>
+    </div>
+    <script>
+        const personArr = ['周杰伦','刘德华','周星驰','Pink老师','张学友']
+        // 随机抽一个
+        const random = Math.floor(Math.random() * personArr.length)
+        // console.log(personArr[random]);
+        // 获取抽到一等奖的
+        const one = document.querySelector('#one')
+        // 修改
+        one.innerHTML = personArr[random]
+        // 抽到奖品的删掉
+        personArr.splice(random,1)
+        // console.log(personArr);
+
+        const random2 = Math.floor(Math.random() * personArr.length)
+        const two = document.querySelector('#two')
+        two.innerHTML = personArr[random2]
+        personArr.splice(random2,1)
+
+        const random3 = Math.floor(Math.random() * personArr.length)
+        const three = document.querySelector('#three')
+        three.innerHTML = personArr[random3]
+        personArr.splice(random3,1)
+    </script>
+</body>
+
+</html>

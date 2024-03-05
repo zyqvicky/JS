@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- localstorage 关闭浏览器不会消失 -->
+    <!-- sessionStorage 关闭浏览器会消失 -->
+    <!-- 语法相同 -->
+    
+    <script>
+        // 以键值对的形式存储的 都要加引号
+        localStorage.setItem('uname','笑笑')
+        // 也可以通过这个方法改名字 原来有就是改 没有就是增
+        localStorage.setItem('uname','左笑笑')
+
+        // 取出键值对
+        console.log(localStorage.getItem('uname'))
+
+        // 进行本地存储删除只用带名字
+        // localStorage.removeItem('uname')
+
+        //本地存储只能存放字符串
+    </script>
+</body>
+</html>

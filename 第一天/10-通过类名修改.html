@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .nav {
+            background-color: pink;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            padding: 10px;
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav"></div>
+    <script>
+        const div = document.querySelector('div')
+
+        // 为盒子添加类名 这里不用加".box"了
+        //classname会覆盖前面定义的类名 所以直接添加在后面就可以
+        div.className = 'nav box'
+        
+    </script>
+</body>
+
+</html>

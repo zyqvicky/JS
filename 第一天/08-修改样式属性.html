@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        const box = document.querySelector('.box')
+        // 改变属性后面接的一定是字符串 而且一定要加单位!!!!
+        box.style.width = '400px'
+
+        //中间有短横线的用小驼峰命名法
+        box.style.backgroundColor = 'hotpink'
+        box.style.border = 'solid 2px red'
+        box.style.borderTop = 'solid 2px blue'
+    </script>
+</body>
+</html>
